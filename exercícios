@@ -1,0 +1,9 @@
+Programar o TIMER4 para gerar PWM com frequência de 1 KHz fazendo TIM_Prescaler = 1 e calculando o valor de TIM_Period.
+Programar os canais 1, 2 e 3 do TIMER4 nas saídas dos LEDs 1, 2 e 3 (PD12, PD13, PD14). Utilizar alternate function.
+Iniciar o PWM para operar com os seguintes Duty Cycles: LED1 5%, LED2 25% e LED3 70%.
+Habilitar um botão externo conectado em PB2 para funcionar por interrupção, utilizando um pull-up interno.
+Implementar na rotina principal uma função para variar o Duty Cycle do LED1 de 0% a 100% em loop e retornando para 0%, de uma maneira que possa-se verificar essa variação visualmente.
+Utilizar a interrupção do botão da placa (PA0) para incrementar o DC do LED3 de forma gradual, enquanto o botão estiver sendo acionado.
+Utilizar
+a interrupção do botão externo (PB2) para decrementar o DC do LED3 de
+forma gradual, enquanto o botão estiver sendo acionado.
