@@ -203,7 +203,7 @@ void Timer4_PWM_Inits(void)
 	dutyClycleChannel1 = 2099; /* 5% duty cycle  */
 	dutyClycleChannel2 = 8399; /* 20% duty cycle  */
 	dutyClycleChannel3 = 31499; /* 75% duty cycle  */
-//	dutyClycleChannel3 = 419; /* 1% duty cycle  */
+	dutyClycleChannel4 = 419; /* 1% duty cycle  */
 
 	/* PWM Mode configuration */
 	TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
@@ -227,9 +227,9 @@ void Timer4_PWM_Inits(void)
 
 	// vou usar somente os canais 1, 2 e 3 do TIM4
 	/* PWM Mode configuration: Channel4 */
-//	TIM_OCInitStructure.TIM_Pulse = 629;  /* 75% duty cycle  */
-//	TIM_OC4Init(TIM4, &TIM_OCInitStructure);
-//	TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Enable);
+	TIM_OCInitStructure.TIM_Pulse = dutyClycleChannel4;  /* 75% duty cycle  */
+	TIM_OC4Init(TIM4, &TIM_OCInitStructure);
+	TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Enable);
 
 	/* TIM3 enable counter */
 	TIM_Cmd(TIM4, ENABLE);
